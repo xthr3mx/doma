@@ -20,6 +20,7 @@
 	$password = "d4494e32";
 	$database_name = "demodomsav1";
 	
+	echo "test";
 	try{
 		echo "test";
 		//$connection = new PDO("mysql:host=$host;dbname=$database_name",$username,$password);
