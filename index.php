@@ -20,7 +20,7 @@
 	$password = "d4494e32";
 	$database_name = "demodomsav1";
 	try{
-		$connection = new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
+		//$connection = new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
 		//$connection->SetAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 	}catch(Exception $exception){
