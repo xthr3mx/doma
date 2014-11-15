@@ -17,7 +17,7 @@
 <?php 
 	$host = "127.0.0.1";
 	$username = "d3m0";
-	$password = "d3_m05$eR.";
+	$password = 'd3_m05$eR.';
 	$database_name = "demo";
 	
 	try{
