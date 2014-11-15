@@ -21,7 +21,7 @@
 	$database_name = "demodomsav1";
 	try{
 		$connection = new PDO("mysql:host=$host;dbname=$dbname",$username,$password);
-		$connection->SetAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		//$connection->SetAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 	}catch(Exception $exception){
 		die(var_dump($exception)),
