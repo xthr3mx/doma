@@ -15,10 +15,10 @@
 	</form>
 
 <?php 
-	$host = "us-cdbr-azure-northcentral-a.cleardb.com";
-	$username = "b8e21eb547cfc6";
-	$password = "d4494e32";
-	$database_name = "demodomsav1";
+	$host = "127.0.0.1";
+	$username = "d3m0";
+	$password = "d3_m05$eR.";
+	$database_name = "demo";
 	
 	try{
 		echo "test";
