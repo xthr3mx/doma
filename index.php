@@ -15,8 +15,7 @@
 	</form>
 
 <?php 
-	echo "NEVER GIVE UP!";
-	/*
+	
 	$host = "us-cdbr-azure-northcentral-a.cleardb.com";
 	$username = "b8e21eb547cfc6";
 	$password = "d4494e32";
@@ -51,25 +50,25 @@
 	$stmt = $connection->query($sql_select);
 	$registrosSql = $stmt->fetchAll();
 	if(count($registrosSql)>0){
-		echo 	"<h2>Personas registradas:</h2>".
-				"<table>".
-				"<tr>"
-				"<td>Nombre</td>".
-				"<td>Email</td>".
-				"<td>Fecha</td>".
-				"</tr>";
+		echo 	"<h2>Personas registradas:</h2>";
+		echo	"<table>";
+		echo	"<tr>";
+		echo	"<td>Nombre</td>";
+		echo	"<td>Email</td>";
+		echo	"<td>Fecha</td>";
+		echo	"</tr>";
 		foreach($registro as $registrosSql){
-			echo 	"<tr>" .
-					"<td>".$registro['nombre']."</td>".
-					"<td>".$registro['email']."</td>".
-					"<td>".$registro['fecha']."</td>".
-					"</tr>";
+			echo 	"<tr>";
+			echo	"<td>".$registro['nombre']."</td>";
+			echo	"<td>".$registro['email']."</td>";
+			echo	"<td>".$registro['fecha']."</td>";
+			echo	"</tr>";
 		}
 		echo 	"</table>";
 	}
 	else{ echo "<h3>No existen registros.</h3>"; }
 	$connection = null;
-	*/
+	
 
 ?>
 
