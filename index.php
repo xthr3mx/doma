@@ -39,6 +39,8 @@
 			}else{
 				$last_inserted_id = $connection->insert_id;
 				$affected_rows = $connection->affected_rows;
+				echo 'ID: '.$last_inserted_id;
+				echo 'affected_rows->'.$affected_rows;
 			}
 
 		}else{
