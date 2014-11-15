@@ -20,7 +20,7 @@
 	$password = "d4494e32";
 	$database_name = "demodomsav1";
 	
-	echo "test";
+	echo "jojojojo";
 	
 	
 ?>
