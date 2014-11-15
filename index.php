@@ -32,7 +32,7 @@
 		if(!empty($_POST)){
 			$nombre = $_POST['nombre'];
 			$email = $_POST['email'];
-			$sql_command = "INSERT INTO alumnos (nombre,email) VALUES ('$nombre', $email)";
+			$sql_command = "INSERT INTO alumnos (nombre,email) VALUES ('$nombre', '$email')";
 
 			if ($connection->query($sql_command)===false){
 				trigger_error('Wrong SQL: '.$sql_command.' Error: '.$connection->error,E_USER_ERROR);
