@@ -30,6 +30,7 @@
 	if(!empty($_POST))
 	{
 		try{
+			/*
 			$nombre = $_POST['nombre'];
 			$email = $_POST['email'];
 			$fecha = date("Y-m-d");
@@ -40,6 +41,7 @@
 			$stmt->bindValue(3,$fecha);
 			$stmt->execute();
 			echo "<h3>Se ha registrado.</h3>";
+			*/
 		}catch(Exception $exception){
 			echo "<h3>No se pudo registrar.</h3>";
 			die(var_dump($exception));
