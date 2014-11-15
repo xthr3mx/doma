@@ -21,8 +21,6 @@
 	$password = "d4494e32";
 	$database_name = "demodomsav1";
 
-	/*
-
 	try{
 		$connection = new PDO("mysql:host=$host;dbname=$database_name",$username,$password);
 		$connection->SetAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -47,7 +45,7 @@
 			die(var_dump($exception));
 		}
 	}
-
+	/*
 	$sql_select = "SELECT * FROM registros";
 	$stmt = $connection->query($sql_select);
 	$registrosSql = $stmt->fetchAll();
