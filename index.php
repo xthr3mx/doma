@@ -16,11 +16,12 @@
 
 <?php 
 	
+	/*
 	$host = "us-cdbr-azure-northcentral-a.cleardb.com";
 	$username = "b8e21eb547cfc6";
 	$password = "d4494e32";
 	$database_name = "demodomsav1";
-
+	*/
 	try{
 		/*
 		$connection = new PDO("mysql:host=$host;dbname=$database_name",$username,$password);
