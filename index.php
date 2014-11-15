@@ -30,6 +30,16 @@
 		}
 
 		if(!empty($_POST)){
+			$nombre = $_POST['nombre'];
+			$email = $_POST['email'];
+			$sql_command = "INSERT INTO alumnos (nombre,email) VALUES ('$nombre', $email)";
+
+			if ($connection->query($sql_command)===false){
+				trigger_error('Wrong SQL: '.$sql_command.' Error: '.$connection->error,E_USER_ERROR);
+			}else{
+				$last_inserted_id = $connection->insert_id;
+				$affected_rows = $connection->affected_rows;
+			}
 
 		}else{
 			echo "<h3>No existen registros.</h3>"; 
