@@ -28,6 +28,8 @@
 			trigger_error('Database connection failed: '+$connection->connect_error, E_USER_ERROR);
 		}
 
+		echo "NEVER GIVE UP! :-D";
+
 	}catch(Exception $e){
 		echo $e;
 	}
