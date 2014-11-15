@@ -39,8 +39,11 @@
 			}else{
 				$last_inserted_id = $connection->insert_id;
 				$affected_rows = $connection->affected_rows;
-				echo 'ID: '.$last_inserted_id;
-				echo 'affected_rows->'.$affected_rows;
+				if($affected_rows==1){
+					echo "<h4>El alumno fue ingresado al sistema.</h4>";
+				}else{
+					echo "<h4>Ocurrio un problema al intentar ingresar el alumno al sistema.</h4>";
+				}
 			}
 
 		}else{
