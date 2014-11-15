@@ -19,6 +19,7 @@
 	$db_username = "d3m0";
 	$db_password = 'd3_m05$eR.';
 	$db_name = "demo";
+	$connection = null;
 	
 	try{
 		$connection = new mysqli($db_host,$db_username,$db_password,$db_name);
@@ -28,10 +29,16 @@
 			trigger_error('Database connection failed: '+$connection->connect_error, E_USER_ERROR);
 		}
 
-		echo "NEVER GIVE UP! :-D";
+		if(!empty($_POST)){
 
-	}catch(Exception $e){
-		echo $e;
+		}else{
+			echo "<h3>No existen registros.</h3>"; 
+		}
+
+		$connection = null;
+
+	}catch(Exception $exception){
+		echo $exception;
 	}
 	
 	
