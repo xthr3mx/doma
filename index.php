@@ -22,7 +22,7 @@
 	
 	try{
 		echo "test";
-	}catch(Exception $e){
+	}catch  (Exception $e){
 		echo $e;
 	}
 	
