@@ -45,7 +45,7 @@
 			die(var_dump($exception));
 		}
 	}
-
+	/*
 	$sql_select = "SELECT * FROM registros";
 	$stmt = $connection->query($sql_select);
 	$registrosSql = $stmt->fetchAll();
@@ -67,6 +67,7 @@
 		echo 	"</table>";
 	}
 	else{ echo "<h3>No existen registros.</h3>"; }
+	*/
 	$connection = null;
 	
 
