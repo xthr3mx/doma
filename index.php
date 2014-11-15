@@ -15,13 +15,19 @@
 	</form>
 
 <?php 
-	$host = "127.0.0.1";
-	$username = "d3m0";
-	$password = 'd3_m05$eR.';
-	$database_name = "demo";
+	$db_host = "127.0.0.1";
+	$db_username = "d3m0";
+	$db_password = 'd3_m05$eR.';
+	$db_name = "demo";
 	
 	try{
-		echo "test";
+		$connection = new mysqli($db_host,$db_username,$db_password,$db_name);
+
+		// check connection
+		if($connection->connect_error){
+			trigger_error('Database connection failed: '+$connection->connect_error, E_USER_ERROR);
+		}
+
 	}catch(Exception $e){
 		echo $e;
 	}
