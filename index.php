@@ -20,7 +20,11 @@
 	$password = "d4494e32";
 	$database_name = "demodomsav1";
 	
-	echo "NEVER GIVE UP!";
+	try{
+		echo "test";
+	}catch(Exception $e){
+		echo $e;
+	}
 	
 	
 ?>
