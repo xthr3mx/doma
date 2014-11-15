@@ -15,6 +15,8 @@
 	</form>
 
 <?php 
+	echo "NEVER GIVE UP!";
+	/*
 	$host = "us-cdbr-azure-northcentral-a.cleardb.com";
 	$username = "b8e21eb547cfc6";
 	$password = "d4494e32";
@@ -67,6 +69,7 @@
 	}
 	else{ echo "<h3>No existen registros.</h3>"; }
 	$connection = null;
+	*/
 
 ?>
 
