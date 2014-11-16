@@ -75,7 +75,7 @@
 */
 	
 $data = array();
-$data["error"] => "esto es un error.";	
+$data["error"] = "esto es un error.";	
 echo json_encode($data);
 
 ?>
