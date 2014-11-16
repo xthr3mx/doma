@@ -74,7 +74,9 @@
 	
 */
 	
-echo "test";
+$data = array();
+$data["error"] => "esto es un error.";	
+echo json_encode($data);
 
 ?>
 
