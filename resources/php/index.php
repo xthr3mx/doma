@@ -1,23 +1,6 @@
-<html>
-<head>
-  <title>Contacto</title>
-</head>
-<body>
-
-	<form method="post" action="index.php">
-		<label for="nombre">Nombe</label>
-		<input type="text" name="nombre" id="nombre" />
-		<br />
-		<label for="email">Email</label>
-		<input type="text" name="email" id="email" />
-		<br />
-		<label for="comentario">Comentario</label>
-		<textarea rows="5" cols="20" id="comentario" name="comentario"></textarea>
-		<br />
-		<input type="submit" name="submit" value="Enviar" />
-	</form>
-
 <?php 
+
+/*
 	$db_host = "127.0.0.1";
 	$db_username = "d3m0";
 	$db_password = 'd3_m05$eR.';
@@ -89,8 +72,9 @@
 		echo $exception;
 	}
 	
+*/
 	
+echo "test";
+
 ?>
 
-</body>
-</html>
