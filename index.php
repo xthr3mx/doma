@@ -58,9 +58,29 @@
 		if($resultset===false){
 			trigger_error('Wrong SQL: '.$sql_select.' Error: '.$connection->error, E_USER_ERROR);		
 		}else{
-			while($row = $resultset->fetch_assoc()){
-				echo "id->".$row['id']." nombre->".$row['nombre']." comentario->".$row['comentario']."fecha->".$row['fecha']."<br />";
+
+			if($resultset->num_rows >= 1){
+				echo "<table>";
+				echo "<tr>";
+				echo "<td>Nombre</td>";
+				echo "<td>Email</td>";
+				echo "<td>Comentario</td>";
+				echo "<td>Fecha</td>";
+				echo "</tr>";
+				while($row = $resultset->fetch_assoc()){
+					//echo "id->".$row['id']." nombre->".$row['nombre']." comentario->".$row['comentario']."fecha->".$row['fecha']."<br />";
+					echo "<tr>";
+						echo "<td>".$row['nombre']."</td>";
+						echo "<td>".$row['email']."</td>";
+						echo "<td>".$row['comentario']."</td>";
+						echo "<td>".$row['fecha']."</td>";
+					echo "<tr>";
+				}
+				echo "</table>";
+			}else{
+				echo "<h4>No tenemos comentarios para mostrar.</h4>";
 			}
+
 		}
 
 		$connection = null;
