@@ -50,8 +50,16 @@
 				}
 			}
 
+		}
+
+		$sql_select = "SELECT * FROM registros";
+		$resultset=$connection->query($sql_select);
+
+		if($resultset===false){
+			trigger_error('Wrong SQL: '.$sql_select.' Error: '.$connection->error, E_USER_ERROR);		
 		}else{
-			echo "<h3>No existen comentarios.</h3>"; 
+			$rows_returned = $resultset->num_rows;
+			echo "El no. de comentarios registrados son: $rows_returned.";
 		}
 
 		$connection = null;
