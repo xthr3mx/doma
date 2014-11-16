@@ -37,7 +37,7 @@
 				}else{
 					$data["error_status"] = false;
 					$data["error_description"] = "";
-					$data["message"] = "Ocurrio un problema al intentar enviar el comentario. Por favor intentarlo mas tarde o contacte al administrador."
+					$data["message"] = "Ocurrio un problema al intentar enviar el comentario. Por favor intentarlo mas tarde o contacte al administrador.";
 				}
 			}
 
