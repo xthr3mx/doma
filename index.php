@@ -58,8 +58,9 @@
 		if($resultset===false){
 			trigger_error('Wrong SQL: '.$sql_select.' Error: '.$connection->error, E_USER_ERROR);		
 		}else{
-			$rows_returned = $resultset->num_rows;
-			echo "El no. de comentarios registrados son: $rows_returned.";
+			while($row = $resultset->fetch_assoc()){
+				echo "id->$row['id'] nombre->$row['nombre'] comentario->$row['comentario'] fecha->$row['fecha'] <br />";
+			}
 		}
 
 		$connection = null;
