@@ -52,7 +52,7 @@
 
 		}
 
-		$sql_select = "SELECT * FROM registros";
+		$sql_select = "SELECT * FROM comentarios";
 		$resultset=$connection->query($sql_select);
 
 		if($resultset===false){
