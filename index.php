@@ -12,7 +12,7 @@
 		<input type="text" name="email" id="email" />
 		<br />
 		<label for="comentario">Comentario</label>
-		<text area rows="5" cols="20" id="comentario" name="comentario" />
+		<textarea rows="5" cols="20" id="comentario" name="comentario" />
 		<br />
 		<input type="submit" name="submit" value="Enviar" />
 	</form>
