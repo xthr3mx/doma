@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Demo</title>
+  <title>Contacto</title>
 </head>
 <body>
 
@@ -11,7 +11,10 @@
 		<label for="email">Email</label>
 		<input type="text" name="email" id="email" />
 		<br />
-		<input type="submit" name="submit" value="Registrar" />
+		<label for="comentario">Comentario</label>
+		<text area rows="5" cols="20" id="comentario" name="comentario" />
+		<br />
+		<input type="submit" name="submit" value="Enviar" />
 	</form>
 
 <?php 
@@ -32,7 +35,8 @@
 		if(!empty($_POST)){
 			$nombre = $_POST['nombre'];
 			$email = $_POST['email'];
-			$sql_command = "INSERT INTO alumnos (nombre,email) VALUES ('$nombre', '$email')";
+			$comentario = $_POST['email'];
+			$sql_command = "INSERT INTO comentarios (nombre,email,comentario) VALUES ('$nombre', '$email', '$comentario')";
 
 			if ($connection->query($sql_command)===false){
 				trigger_error('Wrong SQL: '.$sql_command.' Error: '.$connection->error,E_USER_ERROR);
@@ -40,14 +44,14 @@
 				$last_inserted_id = $connection->insert_id;
 				$affected_rows = $connection->affected_rows;
 				if($affected_rows==1){
-					echo "<h4>El alumno fue ingresado al sistema.</h4>";
+					echo "<h4>El Comentario fue enviado. Muchas gracias por compartir.</h4>";
 				}else{
-					echo "<h4>Ocurrio un problema al intentar ingresar el alumno al sistema.</h4>";
+					echo "<h4>Ocurrio un problema al intentar enviar el comentario. Por favor intentarlo mas tarde o contacte al administrador.</h4>";
 				}
 			}
 
 		}else{
-			echo "<h3>No existen registros.</h3>"; 
+			echo "<h3>No existen comentarios.</h3>"; 
 		}
 
 		$connection = null;
