@@ -59,7 +59,7 @@
 			trigger_error('Wrong SQL: '.$sql_select.' Error: '.$connection->error, E_USER_ERROR);		
 		}else{
 			while($row = $resultset->fetch_assoc()){
-				echo "id->$row['id'] nombre->$row['nombre'] comentario->$row['comentario'] fecha->$row['fecha'] <br />";
+				echo "id->".$row['id']." nombre->".$row['nombre']." comentario->".$row['comentario']."fecha->".$row['fecha']."<br />";
 			}
 		}
 
