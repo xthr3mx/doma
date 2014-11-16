@@ -33,7 +33,7 @@
 				if($affected_rows==1){
 					$data["error_status"] = false;
 					$data["error_description"] = "";
-					$data["message"] = "El comentario se ha enviado de forma exitosa. Muchas gracias por compartir."
+					$data["message"] = "El comentario se ha enviado de forma exitosa. Muchas gracias por compartir.";
 				}else{
 					$data["error_status"] = false;
 					$data["error_description"] = "";
