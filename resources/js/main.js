@@ -14,6 +14,8 @@ function sendDataToServer(){
 		url: 'resources/php/index.php',
 		data: data,
 		success: function(information,textStatus,jqXHR){
+			var json = JSON.parse(information);
+			console.log('error_status->'+json.error_status);
 			console.log(information);
 		},
 		error: function(jqXHR, textStatus, errorThrown){
