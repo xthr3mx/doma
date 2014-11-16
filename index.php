@@ -35,7 +35,7 @@
 		if(!empty($_POST)){
 			$nombre = $_POST['nombre'];
 			$email = $_POST['email'];
-			$comentario = $_POST['email'];
+			$comentario = $_POST['comentario'];
 			$sql_command = "INSERT INTO comentarios (nombre,email,comentario) VALUES ('$nombre', '$email', '$comentario')";
 
 			if ($connection->query($sql_command)===false){
