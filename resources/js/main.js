@@ -18,6 +18,13 @@ function displayMessage(json){
 	}
 };
 
+function clearInformationFromHTMLForm(){
+	$("#nombre").val("");
+	$("#email").val("");
+	$("#comentario").val("");
+	$("#nombre").focus();
+};
+
 function sendDataToServer(){
 	$.ajax({
 		type: "POST",
@@ -26,6 +33,7 @@ function sendDataToServer(){
 		success: function(json_response,textStatus,jqXHR){
 			var json = JSON.parse(json_response);
 			displayMessage(json);
+			clearInformationFromHTMLForm();
 		},
 		error: function(jqXHR, textStatus, errorThrown){
 
