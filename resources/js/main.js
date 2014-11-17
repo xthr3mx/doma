@@ -8,6 +8,16 @@ function getDataFromHTMLForm(){
 	data.comentario = $("#comentario").val();
 };
 
+function displayMessage(json){
+	if(!json.error_status){
+		$("#d-success").css("display","block");
+		$("#d-success p.message").text(json.message);
+	}else{
+		$("#d-error").css("display","block");
+		$("#d-error p.error_description").text(json.message);
+	}
+};
+
 function sendDataToServer(){
 	$.ajax({
 		type: "POST",
@@ -15,6 +25,7 @@ function sendDataToServer(){
 		data: data,
 		success: function(json_response,textStatus,jqXHR){
 			var json = JSON.parse(json_response);
+			displayMessage(json);
 		},
 		error: function(jqXHR, textStatus, errorThrown){
 

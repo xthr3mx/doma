@@ -6,3 +6,11 @@
 .container form button{
 	width: 100%;
 }
+
+/*
+ * dialogs
+*/
+
+#d-success, #d-error{
+	display: none;
+}
