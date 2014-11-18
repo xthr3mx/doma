@@ -66,13 +66,7 @@ function uploadInformation(){
 			"</tr>"
 		);
 */
-		$('table tbody').add(
-			"<tr>"+
-			"<td>c1</td>"+
-			"<td>c2</td>"+
-			"<td>c3</td>"+
-			"</tr>"
-		);
+		$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
 	}
 
 };

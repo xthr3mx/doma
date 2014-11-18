@@ -18,10 +18,10 @@
 /*
  * table
  */
- #table-comments{
+ #comments-container{
  	display: none;
  	width: 90%;
  	margin: 0 auto;
  	margin-top: 5%;
  }
- #table-comments h3{text-align: center;padding-bottom: 2%;}
+ #comments-container h3{text-align: center;padding-bottom: 2%;}
