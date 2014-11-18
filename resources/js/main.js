@@ -47,8 +47,7 @@ function getComments(){
 		url: 'resources/php/information.php',
 		data: {'name':'comentarios', 'id':null},
 		success: function(json_response, textStatus, jqXHR){
-			var json = JSON.parse(json_response);
-			console.log(json);
+			comentarios = JSON.parse(json_response);
 		},
 		error: function(jqXHR, textStatus, errorThrown){
 
@@ -56,8 +55,35 @@ function getComments(){
 	});
 };
 
+function showTable(){$("#table-comments").css("display","block");}
+
+function uploadInformation(){
+	// remove all child nodes 
+	$('tbody').empty();
+	for(var comentario in comentarios){
+		console.log(comentarios[comentario]);
+		$('tbody').add(
+			"<tr>"+
+			"<td>"+comentarios[comentario].nombre+"</td>"+
+			"<td>"+comentarios[comentario].email+"</td>"+
+			"<td>"+comentarios[comentario].comentario+"</td>"+
+			"</tr>"
+		);
+	}
+
+};
+
+
+function logicForDisplayComments(){
+	if(comentarios.length>=1){
+		showTable();
+		uploadInformation();
+	}
+};
+
 function start(){
 	getComments();
+	logicForDisplayComments();
 	$("#contact-form").submit(function(event){
 		getDataFromHTMLForm();
 		sendDataToServer();
