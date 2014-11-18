@@ -41,23 +41,6 @@ function sendDataToServer(){
 	});
 };
 
-function getComments(){
-	$.ajax({
-		type: 'GET',
-		url: 'resources/php/information.php',
-		data: {'name':'comentarios', 'id':null},
-		success: function(json_response, textStatus, jqXHR){
-			comentarios = JSON.parse(json_response);
-			console.log('getComments');
-			console.log(comentarios);
-		},
-		error: function(jqXHR, textStatus, errorThrown){
-
-		}
-	});
-	return;
-};
-
 function showTable(){$("#table-comments").css("display","block");}
 
 function uploadInformation(){
@@ -77,7 +60,19 @@ function uploadInformation(){
 };
 
 function logicForDisplayComments(){
-	getComments();
+	$.ajax({
+		type: 'GET',
+		url: 'resources/php/information.php',
+		data: {'name':'comentarios', 'id':null},
+		success: function(json_response, textStatus, jqXHR){
+			comentarios = JSON.parse(json_response);
+			console.log('getComments');
+			console.log(comentarios);
+		},
+		error: function(jqXHR, textStatus, errorThrown){
+
+		}
+	});
 	if(comentarios.length>=1){
 		showTable();
 		uploadInformation();
