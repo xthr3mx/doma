@@ -59,7 +59,7 @@ function uploadInformation(){
 	}
 	//add event to tr elements 
 	$("table").on('click','tr', function(){
-		alert("jojojojojo");
+		console.log($(this));
 	});
 };
 
