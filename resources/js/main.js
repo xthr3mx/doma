@@ -1,6 +1,6 @@
 $(document).ready(start);
 
-var data = {}, comentarios = {};
+var data = {}, comentarios = null;
 
 function getDataFromHTMLForm(){
 	data.nombre = $("#nombre").val();
@@ -48,6 +48,8 @@ function getComments(){
 		data: {'name':'comentarios', 'id':null},
 		success: function(json_response, textStatus, jqXHR){
 			comentarios = JSON.parse(json_response);
+			console.log('getComments');
+			console.log(comentarios);
 		},
 		error: function(jqXHR, textStatus, errorThrown){
 
@@ -72,7 +74,6 @@ function uploadInformation(){
 	}
 
 };
-
 
 function logicForDisplayComments(){
 	console.log(comentarios);
