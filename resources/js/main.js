@@ -57,11 +57,20 @@ function uploadInformation(){
 			"</tr>"
 		);
 		*/
+		/*
 		console.log(
 			"<tr>"+
 			"<td>"+(comentarios[comentario]).nombre+"</td>"+
 			"<td>"+(comentarios[comentario]).email+"</td>"+
 			"<td>"+(comentarios[comentario]).comentario+"</td>"+
+			"</tr>"
+		);
+*/
+		$('table tbody').add(
+			"<tr>"+
+			"<td>c1</td>"+
+			"<td>c2</td>"+
+			"<td>c3</td>"+
 			"</tr>"
 		);
 	}
