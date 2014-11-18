@@ -41,7 +41,7 @@ function sendDataToServer(){
 	});
 };
 
-function showTable(){$("#table-comments").css("display","block");}
+function showTable(){$("#comments-container").css("display","block");}
 
 function uploadInformation(){
 	// remove all child nodes 
