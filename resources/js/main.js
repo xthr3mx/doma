@@ -60,7 +60,7 @@ function uploadInformation(){
 	//add event to tr elements 
 	$("table").on('click','tr', function(e){
 		console.log($(this));
-		console.log(e);
+		console.log(e.target);
 	});
 };
 
