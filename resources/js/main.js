@@ -45,28 +45,17 @@ function showTable(){$("#comments-container").css("display","block");}
 
 function uploadInformation(){
 	// remove all child nodes 
-	$('table tbody').empty();
+	$('#comments-table tbody').empty();
 	for(var comentario in comentarios){
-		//console.log('Data::nombre->'+(comentarios[comentario]).nombre+'|email->'+(comentarios[comentario]).email+'|comentario->'+(comentarios[comentario]).comentario);
-		/*
-		$('table tbody').add(
+		$(
 			"<tr>"+
 			"<td>"+(comentarios[comentario]).nombre+"</td>"+
 			"<td>"+(comentarios[comentario]).email+"</td>"+
 			"<td>"+(comentarios[comentario]).comentario+"</td>"+
 			"</tr>"
-		);
-		*/
-		/*
-		console.log(
-			"<tr>"+
-			"<td>"+(comentarios[comentario]).nombre+"</td>"+
-			"<td>"+(comentarios[comentario]).email+"</td>"+
-			"<td>"+(comentarios[comentario]).comentario+"</td>"+
-			"</tr>"
-		);
-*/
-		$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
+		).appendTo($("#comments-table tbody"));
+		
+		//$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
 	}
 
 };
