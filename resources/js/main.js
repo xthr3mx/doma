@@ -85,8 +85,14 @@ function start(){
 		sendDataToServer();
 		event.preventDefault();
 	});
+	$("tr").click(function(event){
+		console.log($(this));
+		console.log('test');
+	});
+	/*
 	$("#comments-container #comments-table tbody tr").click(function(event){
 		console.log($(this));
 		console.log('test');
 	});
+	*/
 };
