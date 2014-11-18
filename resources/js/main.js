@@ -66,17 +66,15 @@ function logicForDisplayComments(){
 		data: {'name':'comentarios', 'id':null},
 		success: function(json_response, textStatus, jqXHR){
 			comentarios = JSON.parse(json_response);
-			console.log('getComments');
-			console.log(comentarios);
+			if(comentarios.length>=1){
+				showTable();
+				uploadInformation();
+			}
 		},
 		error: function(jqXHR, textStatus, errorThrown){
 
 		}
 	});
-	if(comentarios.length>=1){
-		showTable();
-		uploadInformation();
-	}
 };
 
 function start(){
