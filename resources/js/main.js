@@ -34,6 +34,7 @@ function sendDataToServer(){
 			var json = JSON.parse(json_response);
 			displayMessage(json);
 			clearInformationFromHTMLForm();
+			logicForDisplayComments();
 		},
 		error: function(jqXHR, textStatus, errorThrown){
 
@@ -54,7 +55,6 @@ function uploadInformation(){
 			"<td>"+(comentarios[comentario]).comentario+"</td>"+
 			"</tr>"
 		).appendTo($("#comments-table tbody"));
-		
 		//$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
 	}
 
