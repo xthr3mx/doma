@@ -75,6 +75,7 @@ function uploadInformation(){
 
 
 function logicForDisplayComments(){
+	console.log(comentarios);
 	if(comentarios.length>=1){
 		showTable();
 		uploadInformation();
