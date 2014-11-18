@@ -85,8 +85,8 @@ function start(){
 		sendDataToServer();
 		event.preventDefault();
 	});
-	$("table tbody tr").click(function(event){
-		console.log($(this));
+	$("table tr").click(function(e){
+		//console.log($(this));
 		console.log('test');
 	});
 };
