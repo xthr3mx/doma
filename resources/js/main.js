@@ -50,9 +50,9 @@ function uploadInformation(){
 		console.log((comentarios[comentario]).nombre);
 		$('tbody').add(
 			"<tr>"+
-			"<td>"+comentarios[comentario].nombre+"</td>"+
-			"<td>"+comentarios[comentario].email+"</td>"+
-			"<td>"+comentarios[comentario].comentario+"</td>"+
+			"<td>"+(comentarios[comentario]).nombre+"</td>"+
+			"<td>"+(comentarios[comentario]).email+"</td>"+
+			"<td>"+(comentarios[comentario]).comentario+"</td>"+
 			"</tr>"
 		);
 	}
