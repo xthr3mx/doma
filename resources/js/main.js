@@ -1,6 +1,6 @@
 $(document).ready(start);
 
-var data = {};
+var data = {}, comentarios = {};
 
 function getDataFromHTMLForm(){
 	data.nombre = $("#nombre").val();
@@ -41,7 +41,23 @@ function sendDataToServer(){
 	});
 };
 
+function getComments(){
+	$.ajax({
+		type: 'GET',
+		url: 'resources/php/information.php',
+		data: {'name':'comentarios', 'id':null},
+		success: function(json_response, textStatus, jqXHR){
+			var json = JSON.parse(json_response);
+			console.log(json);
+		},
+		error: function(jqXHR, textStatus, errorThrown){
+
+		}
+	});
+};
+
 function start(){
+	getComments();
 	$("#contact-form").submit(function(event){
 		getDataFromHTMLForm();
 		sendDataToServer();

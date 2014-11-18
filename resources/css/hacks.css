@@ -9,8 +9,18 @@
 
 /*
  * dialogs
-*/
+ */
 
 #d-success, #d-error{
 	display: none;
 }
+
+/*
+ * table
+ */
+ #table-comments{
+ 	width: 90%;
+ 	margin: 0 auto;
+ 	margin-top: 5%;
+ }
+ #table-comments h3{text-align: center;padding-bottom: 2%;}
