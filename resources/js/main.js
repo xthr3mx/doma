@@ -47,7 +47,7 @@ function uploadInformation(){
 	// remove all child nodes 
 	$('tbody').empty();
 	for(var comentario in comentarios){
-		console.log(comentarios[comentario]);
+		console.log((comentarios[comentario]).nombre);
 		$('tbody').add(
 			"<tr>"+
 			"<td>"+comentarios[comentario].nombre+"</td>"+
