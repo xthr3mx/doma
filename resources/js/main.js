@@ -58,8 +58,9 @@ function uploadInformation(){
 		//$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
 	}
 	//add event to tr elements 
-	$("table").on('click','tr', function(){
+	$("table").on('click','tr', function(e){
 		console.log($(this));
+		console.log(e);
 	});
 };
 
