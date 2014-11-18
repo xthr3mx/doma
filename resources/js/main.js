@@ -76,7 +76,7 @@ function uploadInformation(){
 };
 
 function logicForDisplayComments(){
-	console.log(comentarios);
+	getComments();
 	if(comentarios.length>=1){
 		showTable();
 		uploadInformation();
@@ -84,7 +84,6 @@ function logicForDisplayComments(){
 };
 
 function start(){
-	getComments();
 	logicForDisplayComments();
 	$("#contact-form").submit(function(event){
 		getDataFromHTMLForm();
