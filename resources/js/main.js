@@ -55,6 +55,7 @@ function getComments(){
 
 		}
 	});
+	return;
 };
 
 function showTable(){$("#table-comments").css("display","block");}
