@@ -50,7 +50,7 @@ function uploadInformation(){
 	for(var comentario in comentarios){
 		$(
 			"<tr>"+
-			"<td>"+(comentarios[comentario]).id+"</td>"+
+			"<td><span class='glyphicon glyphicon-pencil' aria-hidden='true'></span>"+(comentarios[comentario]).id+"</td>"+
 			"<td>"+(comentarios[comentario]).nombre+"</td>"+
 			"<td>"+(comentarios[comentario]).email+"</td>"+
 			"<td>"+(comentarios[comentario]).comentario+"</td>"+
@@ -60,7 +60,6 @@ function uploadInformation(){
 	}
 	//add event to tr elements 
 	$("table").on('click','tr', function(e){
-		//console.log($(this));
 		console.log(e.target.textContent);
 	});
 };
