@@ -61,8 +61,8 @@ function uploadInformation(){
 	//add event to tr elements 
 	$("table").on('click','tr', function(e){
 		console.log($(this));
-		var current_td = (e.target).text();
-		console.log(current_td);
+		console.log(e);
+		console.log(e.target);
 	});
 };
 
