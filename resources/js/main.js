@@ -57,7 +57,10 @@ function uploadInformation(){
 		).appendTo($("#comments-table tbody"));
 		//$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
 	}
-
+	//add event to tr elements 
+	$("table").on('click','tr', function(){
+		alert("jojojojojo");
+	});
 };
 
 function logicForDisplayComments(){
@@ -85,8 +88,10 @@ function start(){
 		sendDataToServer();
 		event.preventDefault();
 	});
+	/*
 	$("table tr").click(function(e){
 		//console.log($(this));
 		console.log('test');
 	});
+	*/
 };
