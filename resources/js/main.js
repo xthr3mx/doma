@@ -56,11 +56,11 @@ function uploadInformation(){
 			"<td>"+(comentarios[comentario]).comentario+"</td>"+
 			"</tr>"
 		).appendTo($("#comments-table tbody"));
-		//$("<tr><td>c1</td><td>c2</td><td>c3</td></tr>").appendTo($("#comments-table tbody"));
 	}
 	//add event to tr elements 
-	$("table").on('click','tr', function(e){
+	$("table").on('click','tr td span.id', function(e){
 		console.log(e.target.textContent);
+		console.log(e);
 	});
 };
 
