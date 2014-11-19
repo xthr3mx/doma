@@ -99,12 +99,6 @@ function start(){
 			name = $("#u-nombre").val(),
 			email = $("#u-email").val(),
 			comentario = $("#u-comentario").val();
-		console.log(
-			'id->'+id+
-			'|name->'+name+
-			'|email->'+email+
-			'|comentario->'+comentario
-		);
 
 		$.ajax({
 			type: "POST",
@@ -112,7 +106,13 @@ function start(){
 			data: {'id': id, 'name': name, 'email': email, 'comment': comentario},
 			success: function(json_response,textStatus,jqXHR){
 				var json = JSON.parse(json_response);
-				console.log(json);
+				if(!json.error_status){
+					$("#u-d-success").css("display","block");
+					$("#u-d-success p.message").text(json.message);
+				}else{
+					$("#u-d-error").css("display","block");
+					$("#u-d-error p.error_description").text(json.message);
+				}
 			},
 			error: function(jqXHR, textStatus, errorThrown){
 

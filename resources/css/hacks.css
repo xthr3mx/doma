@@ -13,7 +13,7 @@ form#update-form{ width: 85%; margin: 0 auto; }
  * dialogs
  */
 
-#d-success, #d-error{
+#d-success, #d-error, #u-d-success, #u-d-error{
 	display: none;
 }
 
