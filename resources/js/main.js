@@ -117,6 +117,9 @@ function start(){
 
 					$("#u-d-success").css("display","block");
 					$("#u-d-success p.message").text(json.message);
+
+					logicForDisplayComments();
+
 				}else{
 					$("#u-d-error").css("display","block");
 					$("#u-d-error p.error_description").text(json.message);
