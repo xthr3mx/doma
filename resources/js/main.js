@@ -99,6 +99,7 @@ function start(){
 		//sendDataToServer();
 		console.log('id->'+$('#u-id').val());
 		event.preventDefault();
+		$("#m-update").modal('hide');
 	});
 
 };
