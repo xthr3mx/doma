@@ -50,7 +50,7 @@ function uploadInformation(){
 	for(var comentario in comentarios){
 		$(
 			"<tr>"+
-			"<td><span class='glyphicon glyphicon-edit' aria-hidden='true'></span>"+(comentarios[comentario]).id+"</td>"+
+			"<td><span class='glyphicon glyphicon-edit' aria-hidden='true'></span> <span class='id'>"+(comentarios[comentario]).id+"</span></td>"+
 			"<td>"+(comentarios[comentario]).nombre+"</td>"+
 			"<td>"+(comentarios[comentario]).email+"</td>"+
 			"<td>"+(comentarios[comentario]).comentario+"</td>"+
