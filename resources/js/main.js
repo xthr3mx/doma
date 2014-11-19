@@ -99,6 +99,12 @@ function start(){
 			name = $("#u-nombre").val(),
 			email = $("#u-email").val(),
 			comentario = $("#u-comentario").val();
+		console.log(
+			'id->'+id+
+			'|name->'+name+
+			'|email->'+email+
+			'|comentario->'+comentario
+		);
 
 		$.ajax({
 			type: "POST",
