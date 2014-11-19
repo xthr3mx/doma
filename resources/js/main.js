@@ -63,6 +63,8 @@ function uploadInformation(){
 		var id = parseInt(e.target.textContent);
 		if(id>=1){
 			$("#u-id").val(id);
+			$("#u-d-error").css("display","none");
+			$("#u-d-success").css("display","none");
 			$("#m-update").modal('show');
 		}else{console.log('NEVER GIVE UP!');}
 	});
@@ -109,6 +111,12 @@ function start(){
 				if(!json.error_status){
 					$("#u-d-success").css("display","block");
 					$("#u-d-success p.message").text(json.message);
+
+					$("#u-id").val("");
+					$("#u-nombre").val("");
+					$("#u-email").val("");
+					$("#u-comentario").val("");
+
 				}else{
 					$("#u-d-error").css("display","block");
 					$("#u-d-error p.error_description").text(json.message);
