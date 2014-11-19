@@ -62,7 +62,7 @@ function uploadInformation(){
 		console.log(e.target.textContent);
 		var id = parseInt(e.target.textContent);
 		if(id>=1){
-			$("#u-id"").val(id);
+			$("#u-id").val(id);
 			$("#m-update").modal('show');
 		}else{console.log('NEVER GIVE UP!');}
 	});
