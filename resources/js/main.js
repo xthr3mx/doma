@@ -59,7 +59,7 @@ function uploadInformation(){
 	}
 	//add event to tr elements 
 	$("table").on('click','tr td span.id', function(e){
-		console.log(e.target.textContent);
+		//console.log(e.target.textContent);
 		var id = parseInt(e.target.textContent);
 		if(id>=1){
 			$("#u-id").val(id);
