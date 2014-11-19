@@ -93,10 +93,12 @@ function start(){
 		sendDataToServer();
 		event.preventDefault();
 	});
-	/*
-	$("table tr").click(function(e){
-		//console.log($(this));
-		console.log('test');
+
+	$("#update-form").submit(function(event){
+		//getDataFromHTMLForm();
+		//sendDataToServer();
+		console.log('id->'+$('#u-id').val());
+		event.preventDefault();
 	});
-	*/
+
 };
