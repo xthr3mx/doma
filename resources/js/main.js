@@ -95,11 +95,26 @@ function start(){
 	});
 
 	$("#update-form").submit(function(event){
-		//getDataFromHTMLForm();
-		//sendDataToServer();
-		console.log('id->'+$('#u-id').val());
+		var	id = $("#u-id").val(),
+			name = $("#u-nombre").val(),
+			email = $("#u-email").val(),
+			comentario = $("#u-comentario").val();
+
+		$.ajax({
+			type: "POST",
+			url: 'resources/php/update.php',
+			data: {'id': id, 'name': name, 'email': email, 'comment': comentario},
+			success: function(json_response,textStatus,jqXHR){
+				var json = JSON.parse(json_response);
+				console.log(json);
+			},
+			error: function(jqXHR, textStatus, errorThrown){
+
+			}
+		});
+
 		event.preventDefault();
-		$("#m-update").modal('hide');
+		//$("#m-update").modal('hide');
 	});
 
 };
