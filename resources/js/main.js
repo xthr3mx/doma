@@ -109,14 +109,14 @@ function start(){
 			success: function(json_response,textStatus,jqXHR){
 				var json = JSON.parse(json_response);
 				if(!json.error_status){
-					$("#u-d-success").css("display","block");
-					$("#u-d-success p.message").text(json.message);
 
 					$("#u-id").val("");
 					$("#u-nombre").val("");
 					$("#u-email").val("");
 					$("#u-comentario").val("");
 
+					$("#u-d-success").css("display","block");
+					$("#u-d-success p.message").text(json.message);
 				}else{
 					$("#u-d-error").css("display","block");
 					$("#u-d-error p.error_description").text(json.message);
